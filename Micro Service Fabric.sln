@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget Libraries", "Nuget Libraries", "{5103B92D-51FC-4675-93FF-7AC42AEACBF1}"
 EndProject
@@ -107,5 +107,8 @@ Global
 		{41A36446-4E4C-4E9B-AF07-90D58CFED004} = {5103B92D-51FC-4675-93FF-7AC42AEACBF1}
 		{A7B7C9A2-C13D-4DFA-9632-EC51822AE7E9} = {314F5341-BBBC-4160-B8E0-60D001BF1D0D}
 		{A8031622-50DA-446A-B68B-D8A36EAD5B5C} = {5103B92D-51FC-4675-93FF-7AC42AEACBF1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C2B8852-E1BF-4E73-A529-705A11BA528A}
 	EndGlobalSection
 EndGlobal

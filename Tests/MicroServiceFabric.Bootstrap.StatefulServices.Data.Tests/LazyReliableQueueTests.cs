@@ -1,11 +1,12 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoFixture.Xunit2;
 using FluentAssertions;
 using Microsoft.ServiceFabric.Data;
 using Microsoft.ServiceFabric.Data.Collections;
 using NSubstitute;
-using Ploeh.AutoFixture.Xunit2;
+//using Ploeh.AutoFixture.Xunit2;
 using Xunit;
 
 namespace MicroServiceFabric.Bootstrap.StatefulServices.Data.Tests

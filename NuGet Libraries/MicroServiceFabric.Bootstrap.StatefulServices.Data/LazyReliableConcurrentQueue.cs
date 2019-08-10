@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Data;
-using Microsoft.ServiceFabric.Data.Collections.Preview;
+using Microsoft.ServiceFabric.Data.Collections;
 using MicroServiceFabric.CodeContracts;
 
 namespace MicroServiceFabric.Bootstrap.StatefulServices.Data
@@ -24,9 +24,15 @@ namespace MicroServiceFabric.Bootstrap.StatefulServices.Data
                 TimeSpan? timeout = null)
             => _wrappedInstance.Value.EnqueueAsync(tx, value, cancellationToken, timeout);
 
-        public Task<T> DequeueAsync(ITransaction tx, CancellationToken cancellationToken = new CancellationToken(),
-                TimeSpan? timeout = null)
-            => _wrappedInstance.Value.DequeueAsync(tx, cancellationToken, timeout);
+        public async Task<ConditionalValue<T>> TryDequeueAsync(ITransaction tx, CancellationToken cancellationToken = new CancellationToken(),
+            TimeSpan? timeout = null)
+        {
+            return await _wrappedInstance.Value.TryDequeueAsync(tx, cancellationToken, timeout);
+        }
+
+        //public Task<T> DequeueAsync(ITransaction tx, CancellationToken cancellationToken = new CancellationToken(),
+        //        TimeSpan? timeout = null)
+        //    => _wrappedInstance.Value.DequeueAsync(tx, cancellationToken, timeout);
 
         public long Count => _wrappedInstance.Value.Count;
     }
